@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/onboardingFragment">
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.omkarcodes.moneyx.ui.auth.fragments.OnboardingFragment"
+        android:label="OnboardingFragment" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/onboardingFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_onboardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/onboardingFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_onboardingFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/onboardingFragment"
+            app:launchSingleTop="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.omkarcodes.moneyx.ui.auth.fragments.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.omkarcodes.moneyx.ui.auth.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.omkarcodes.moneyx.ui.auth.fragments.PasswordFragment"
+        android:label="PasswordFragment" >
+        <action
+            android:id="@+id/action_passwordFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:popUpTo="@id/passwordFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_passwordFragment_to_homeFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/passwordFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"  />
+        <argument
+            android:name="isPinCreation"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.omkarcodes.moneyx.ui.auth.fragments.SuccessFragment"
+        android:label="SuccessFragment" >
+        <action
+            android:id="@+id/action_successFragment_to_homeFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.omkarcodes.moneyx.ui.home.fragments.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_newTransactionFragment"
+            app:destination="@id/newTransactionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_logOutBottomSheet"
+            app:destination="@id/logOutBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTransactionFragment"
+        android:name="com.omkarcodes.moneyx.ui.home.fragments.NewTransactionFragment"
+        android:label="NewTransactionFragment" >
+        <argument
+            android:name="isIncome"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.omkarcodes.moneyx.ui.home.fragments.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="transaction"
+            app:argType="com.omkarcodes.moneyx.ui.home.Transaction"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <dialog
+        android:id="@+id/logOutBottomSheet"
+        android:name="com.omkarcodes.moneyx.ui.auth.fragments.LogOutBottomSheet"
+        android:label="LogOutBottomSheet" >
+        <action
+            android:id="@+id/action_logOutBottomSheet_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_logOutBottomSheet_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
+    </dialog>
+</navigation>

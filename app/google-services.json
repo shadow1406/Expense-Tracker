@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "934529994657",
+    "project_id": "expense-tracker-93f83",
+    "storage_bucket": "expense-tracker-93f83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934529994657:android:3116023079ad04988f05e0",
+        "android_client_info": {
+          "package_name": "com.omkarcodes.moneyx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934529994657-iv92i6dp02f3s75rutup422rgobgc7p0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS-2RXn2QGRRUWNQHzBCYOjTw9LVXidPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934529994657-iv92i6dp02f3s75rutup422rgobgc7p0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
