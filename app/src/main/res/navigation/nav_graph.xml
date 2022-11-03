@@ -5,7 +5,7 @@
     app:startDestination="@id/onboardingFragment">
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.omkarcodes.moneyx.ui.auth.fragments.OnboardingFragment"
+        android:name="com.prathmesh.moneyx.ui.auth.fragments.OnboardingFragment"
         android:label="OnboardingFragment" >
         <action
             android:id="@+id/action_onboardingFragment_to_signUpFragment"
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.omkarcodes.moneyx.ui.auth.fragments.SignUpFragment"
+        android:name="com.prathmesh.moneyx.ui.auth.fragments.SignUpFragment"
         android:label="SignUpFragment" >
         <action
             android:id="@+id/action_signUpFragment_to_loginFragment"
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.omkarcodes.moneyx.ui.auth.fragments.LoginFragment"
+        android:name="com.prathmesh.moneyx.ui.auth.fragments.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/passwordFragment"
-        android:name="com.omkarcodes.moneyx.ui.auth.fragments.PasswordFragment"
+        android:name="com.prathmesh.moneyx.ui.auth.fragments.PasswordFragment"
         android:label="PasswordFragment" >
         <action
             android:id="@+id/action_passwordFragment_to_successFragment"
@@ -77,7 +77,7 @@
     </fragment>
     <fragment
         android:id="@+id/successFragment"
-        android:name="com.omkarcodes.moneyx.ui.auth.fragments.SuccessFragment"
+        android:name="com.prathmesh.moneyx.ui.auth.fragments.SuccessFragment"
         android:label="SuccessFragment" >
         <action
             android:id="@+id/action_successFragment_to_homeFragment"
@@ -85,7 +85,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.omkarcodes.moneyx.ui.home.fragments.MainFragment"
+        android:name="com.prathmesh.moneyx.ui.home.fragments.MainFragment"
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_newTransactionFragment"
@@ -99,7 +99,7 @@
     </fragment>
     <fragment
         android:id="@+id/newTransactionFragment"
-        android:name="com.omkarcodes.moneyx.ui.home.fragments.NewTransactionFragment"
+        android:name="com.prathmesh.moneyx.ui.home.fragments.NewTransactionFragment"
         android:label="NewTransactionFragment" >
         <argument
             android:name="isIncome"
@@ -108,17 +108,17 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.omkarcodes.moneyx.ui.home.fragments.DetailFragment"
+        android:name="com.prathmesh.moneyx.ui.home.fragments.DetailFragment"
         android:label="DetailFragment" >
         <argument
             android:name="transaction"
-            app:argType="com.omkarcodes.moneyx.ui.home.Transaction"
+            app:argType="com.prathmesh.moneyx.ui.home.Transaction"
             app:nullable="true"
             android:defaultValue="@null" />
     </fragment>
     <dialog
         android:id="@+id/logOutBottomSheet"
-        android:name="com.omkarcodes.moneyx.ui.auth.fragments.LogOutBottomSheet"
+        android:name="com.prathmesh.moneyx.ui.auth.fragments.LogOutBottomSheet"
         android:label="LogOutBottomSheet" >
         <action
             android:id="@+id/action_logOutBottomSheet_to_mainFragment"
