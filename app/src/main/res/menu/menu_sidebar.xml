@@ -5,14 +5,17 @@
 
     <item
         android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
         android:title="Home" />
 
     <item
         android:id="@+id/nav_transactions"
+        android:icon="@drawable/ic_transactions"
         android:title="Transactions" />
 
     <item
         android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
         android:title="Logout" />
 
 </menu>
